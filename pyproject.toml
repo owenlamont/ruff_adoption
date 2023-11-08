@@ -1,0 +1,55 @@
+[tool.ruff]
+
+line-length = 140
+indent-width = 4
+preview = true
+target-version = "py311"
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "lf"
+
+[tool.ruff.lint]
+# On top of the defaults ('E', 'F'), enable flake8-builtins ('A'), flake8-bugbear ('B'),
+# flake8-comprehensions ('C4'), flake8-implicit-str-concat ('ISC'),
+# flake8-quotes ('Q'), and flake8-print ('T20')
+select = ["A", "B", "C4", "D", "E", "F", "FURB", "I", "ISC", "Q", "T20", "UP"]
+ignore = [
+    "A003", # Class attribute {name} is shadowing a Python builtin
+    "D100", # Missing docstring in public module
+    "D101", # Missing docstring in public class
+    "D102", # Missing docstring in public method
+    "D103", # Missing docstring in public function
+    "D104", # Missing docstring in public package
+    "D105", # Missing docstring in magic method
+    "D106", # Missing docstring in public nested class
+    "D107", # Missing docstring in __init__
+    "D202", # No blank lines allowed after function docstring
+    "D213", # Multi-line docstring summary should start at the second line
+    "D214", # Section is over-indented
+    "D215", # Section underline is over-indented
+    "D400", # First line should end with a period
+    "D415", # First line should end with a period, question mark, or exclamation
+    "D416", # Section name should end with a colon
+    "D417", # Missing argument descriptions in the docstring
+    "D418", # Function/ Method decorated with @overload shouldn't contain a docstring
+    "E203", # Whitespace before ':' (fights rust format)
+    "FURB140", # Use itertools.starmap instead of the generator
+    "ISC001", # Implicitly concatenated string literals on one line (fights rust format)
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.isort]
+case-sensitive = false
+combine-as-imports = true
+force-sort-within-sections = true
+lines-after-imports = 2
+order-by-type = false
+
+[tool.ruff.pydocstyle]
+convention = "numpy"

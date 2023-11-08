@@ -75,8 +75,15 @@ docs/_build/
 .pybuilder/
 target/
 
+# IDE configs
+.idea/
+.vscode/
+
 # Jupyter Notebook
 .ipynb_checkpoints
+
+# Scraped data folder
+pre-commits/
 
 # IPython
 profile_default/
