@@ -12,10 +12,8 @@ skip-magic-trailing-comma = false
 line-ending = "lf"
 
 [tool.ruff.lint]
-# On top of the defaults ('E', 'F'), enable flake8-builtins ('A'), flake8-bugbear ('B'),
-# flake8-comprehensions ('C4'), flake8-implicit-str-concat ('ISC'),
-# flake8-quotes ('Q'), and flake8-print ('T20')
-select = ["A", "B", "C4", "D", "E", "F", "FURB", "I", "ISC", "Q", "T20", "UP"]
+# See Ruff rules here: https://docs.astral.sh/ruff/rules/
+select = ["A", "B", "C4", "D", "E", "F", "FURB", "ISC", "Q", "T20", "UP"]
 ignore = [
     "A003", # Class attribute {name} is shadowing a Python builtin
     "D100", # Missing docstring in public module
@@ -36,6 +34,7 @@ ignore = [
     "D417", # Missing argument descriptions in the docstring
     "D418", # Function/ Method decorated with @overload shouldn't contain a docstring
     "E203", # Whitespace before ':' (fights rust format)
+    "F401", # {} imported but unused (Fails to recognise all used imports in Jupyter)
     "FURB140", # Use itertools.starmap instead of the generator
     "ISC001", # Implicitly concatenated string literals on one line (fights rust format)
 ]
