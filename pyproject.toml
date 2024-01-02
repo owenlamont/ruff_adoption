@@ -37,6 +37,7 @@ ignore = [
     "F401", # {} imported but unused (Fails to recognise all used imports in Jupyter)
     "FURB140", # Use itertools.starmap instead of the generator
     "ISC001", # Implicitly concatenated string literals on one line (fights rust format)
+    "T201", # print found
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
