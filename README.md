@@ -19,7 +19,7 @@ Additional notes on the usage of the notebooks is included in the notebooks them
 
 Re-ran the data collection and analysis on 1 Jan 2024 to take the results up to the end of 2023. Added a more whimsical version of the visualisation here.
 
-![funny plot of Ruff adoption to the end of 2023](ruff_the_new_black.png)
+![funny plot of Ruff adoption to the end of 2023](ruff_is_the_new_black.png)
 
 ## Motivation
 
