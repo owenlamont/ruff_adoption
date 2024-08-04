@@ -8,12 +8,30 @@ target-version = "py311"
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
-skip-magic-trailing-comma = false
+skip-magic-trailing-comma = true
 line-ending = "lf"
 
 [tool.ruff.lint]
 # See Ruff rules here: https://docs.astral.sh/ruff/rules/
-select = ["A", "B", "C4", "D", "E", "F", "FURB", "ISC", "Q", "T20", "UP"]
+select = [
+    "A",
+    "B",
+    "C4",
+    "D",
+    "E",
+    "F",
+    "FURB",
+    "I",
+    "ISC",
+    "NPY",
+    "PT",
+    "Q",
+    "RET",
+    "RUF",
+    "SIM",
+    "T20",
+    "UP"
+]
 ignore = [
     "A003", # Class attribute {name} is shadowing a Python builtin
     "D100", # Missing docstring in public module
@@ -35,21 +53,39 @@ ignore = [
     "D418", # Function/ Method decorated with @overload shouldn't contain a docstring
     "E203", # Whitespace before ':' (fights rust format)
     "F401", # {} imported but unused (Fails to recognise all used imports in Jupyter)
+    "FURB118", # Use operator.{operator} instead of defining a function
     "FURB140", # Use itertools.starmap instead of the generator
+    "FURB142", # for-loop-set-mutations
     "ISC001", # Implicitly concatenated string literals on one line (fights rust format)
+    "PT001", # pytest-fixture-incorrect-parentheses-style
+    "PT004", # pytest-missing-fixture-name-underscore
+    "PT012", # `pytest.raises()` block should contain a single simple statement
+    "PT019", # Fixture {name} without value is injected as parameter
+    "RET504", # Unnecessary assignment to <some var> before `return` statement
+    "RUF012", # Mutable class attributes should be annotated with `typing.ClassVar`
     "T201", # print found
 ]
 
 # Allow fix for all enabled rules (when `--fix`) is provided.
 fixable = ["ALL"]
-unfixable = []
+unfixable = [
+    "B905", # Enforce strict argument on zip - but don't autofix as strict=False
+]
 
-[tool.ruff.isort]
+[tool.ruff.lint.isort]
 case-sensitive = false
 combine-as-imports = true
 force-sort-within-sections = true
 lines-after-imports = 2
 order-by-type = false
 
-[tool.ruff.pydocstyle]
+[tool.ruff.lint.pydocstyle]
 convention = "numpy"
+
+
+[tool.typos]
+
+[tool.typos.files]
+extend-exclude = [
+    "repos.txt"
+]

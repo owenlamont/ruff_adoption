@@ -10,7 +10,7 @@ This is an analysis and visualisation of the Ruff linter and formatter tool (spe
 
 Two Jupyter notebooks are included I used to produce the above plot:
 
-- collect_data.ipynb - this notebook uses pyGithub to scrape the repo data and save historial .pre-commit-config.yaml files (one per month, per repo)
+- collect_data.ipynb - this notebook uses pyGithub to scrape the repo data and save historical .pre-commit-config.yaml files (one per month, per repo)
 - analyse_results.ipynb - this notebook aggregates the counts of repos that use a particular pre-commit tool to produce the above plot
 
 Additional notes on the usage of the notebooks is included in the notebooks themselves.
