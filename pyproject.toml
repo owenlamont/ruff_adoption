@@ -78,6 +78,7 @@ combine-as-imports = true
 force-sort-within-sections = true
 lines-after-imports = 2
 order-by-type = false
+split-on-trailing-comma=false
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
