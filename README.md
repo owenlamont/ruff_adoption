@@ -2,7 +2,7 @@
 
 Analysis of Ruff Adoption via Github pre-commit-configs
 
-![plot of Ruff adoption to the end of 2023](ruff_growth.png)
+![plot of Ruff adoption to June 2025](ruff_growth.png)
 
 ## Introduction
 
@@ -17,13 +17,13 @@ Additional notes on the usage of the notebooks is included in the notebooks them
 
 ### Update
 
-Re-ran the data collection and analysis on 3 Mar 2024 to take the results up to the end of Feb 2024.
+Re-ran the data collection and analysis on 11 Jul 2025 to take the results up to the end of Jun 2025.
 
-![funny plot of Ruff adoption to the end of Feb 2024](ruff_is_the_new_black.png)
+![funny plot of Ruff adoption to the end of June 2025](ruff_is_the_new_black.png)
 
 ## Motivation
 
-I'd observed a lot of positive sentiment around [Ruff](https://github.com/astral-sh/ruff) - the Python linter and formatter tool which I too shared. But when it came to convincing others that Ruff was a good tool to adopt I had no quantiative evidence to back up the idea that it was gaining a lot of market/repo share. To address that I thought a (relatively) easy way was to monitor trends in pre-commit tool use over time in popular Python Github repos.
+I'd observed a lot of positive sentiment around [Ruff](https://github.com/astral-sh/ruff) - the Python linter and formatter tool which I too shared. But when it came to convincing others that Ruff was a good tool to adopt I had no quantitative evidence to back up the idea that it was gaining a lot of market/repo share. To address that I thought a (relatively) easy way was to monitor trends in pre-commit tool use over time in popular Python Github repos.
 
 ## Results / Discussion
 
